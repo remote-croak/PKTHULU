@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "UTF-8"/>
+        <meta name = "viewport" content = "width=device-width, initial-scale=1.0"/>
+        <title> Pokethulu Cultist Creator</title>
+        <link rel="stylesheet" href="./cultstyle.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+        
+    </head>
+    <body>
+        <div id="app">
+            
+            <!-- cultist Name Input -->
+            <div class="row">
+                <div class="rowCell rowCellFill"> Name
+                    <div class="container">
+                        <input id = "nameInput" placeholder="Name" class="containerInput" />
+                        <label class="containerLabel">Name</label>
+                    </div>
+
+                    Type
+                    <div class="container">
+                        <input id = "typeInput" placeholder="Type" class="containerInput" />
+                        <label class="containerLabel">Type</label>
+                    </div>
+
+                    Hometown
+
+                    <div class="container">
+                        <input id = "homeInput" placeholder="Hometown" class="containerInput" />
+                        <label class="containerLabel" >Hometown</label>
+                    </div>
+               
+
+                    Age
+                
+                    <div class="container">
+                        <input id = "ageInput" placeholder="Age(5-16)" class="containerInput">
+                            <label class = "ranAge" id = "age" onclick = "clearField('age')"></label>
+                        <label class="containerLabel" >Age</label>
+                        
+                    </div>
+                    <span>
+                        <button id = "ageButton"  class="ranButton" onclick="calcStat('age')"></button>
+                    </span>
+                </div>
+
+                <!-- Track Remaining points and Save -->
+                <div class="rowCell rowCellFill">
+                    <div class = "circleVal circleRemPoints">
+                        <div id = "remPoints" class = "circleText">24</div>
+                    </div>
+
+                    <div>Remaining Points</div>
+                </div>
+
+                <div class="rowCell rowCellFill">
+                    <div class="save">
+                        
+                        <button class ="saveButton" onClick = "saveChar()" ></button>
+                        <div><label> Save Character</label></div>
+                    </div>
+                    
+                </div>
+            </div>
+
+
+
+        <!-- cultist Stats Input -->
+        
+        <div class="row">
+            <div class="rowCell rowCellFill">
+                <div class = "statText">Grade Level</div>
+                <div>
+                    <span class = "circleVal circleStatPoints">
+                        <div class="circleText">
+                            <input class = "statInput" id = "gradeInput" placeholder="1">
+                                <label id = "grade" onclick = "clearField('grade')"></label>
+                        </div>
+                    </span>
+
+                    <span class="circleVal circleStatInput"></span>
+                    <span class="circleVal circleStatInput"></span>
+                    <span class="circleVal circleStatInput"></span>
+                    <span class="circleVal circleStatInput"></span>
+                    <span class="circleVal circleStatInput"></span>
+                    <span class="circleVal circleStatInput"></span>
+                    <span class="circleVal circleStatInput"></span>
+                    <span class="circleVal circleStatInput"></span>
+                    <span class="circleVal circleStatInput"></span>
+                    <span class="circleVal circleStatInput"></span>
+                    <span class="circleVal circleStatInput"></span>
+                    <span class="circleVal circleStatInput"></span>
+                    
+                    
+                    <span>
+                        <button class="ranButton" onclick = "calcStat('grade')"></button>
+                    </span>
+                    
+                </div>
+                   
+                
+            </div>
+
+
+            <div class="rowCell rowCellFill">
+                <div class="statText" ID ="Lore">Pokethulu Lore</div>
+                
+
+                <div>
+                    <span class="circleVal circleStatPoints">
+                        <div class="circleText">
+                            <input class = "statInput" id = "loreInput" placeholder="1">
+                            <label id = "lore" onclick = "clearField('lore')"></label>
+                        </div>
+                    </span>
+            
+            
+                    <span class="circleVal circleStatInput"></span>
+                    <span class="circleVal circleStatInput"></span>
+                    <span class="circleVal circleStatInput"></span>
+                    <span class="circleVal circleStatInput"></span>
+                    <span class="circleVal circleStatInput"></span>
+                    <span class="circleVal circleStatInput"></span>
+                    <span class="circleVal circleStatInput"></span>
+                    <span class="circleVal circleStatInput"></span>
+                    <span class="circleVal circleStatInput"></span>
+                    <span class="circleVal circleStatInput"></span>
+                    <span class="circleVal circleStatInput"></span>
+                    <span class="circleVal circleStatInput"></span>
+            
+                    <span>
+                        <button class="ranButton" onclick = "calcStat('lore')"></button>
+                    </span>
+
+                </div>
+            
+            
+            </div>
+
+            <div class="rowCell rowCellFill">
+                <div class="statText">Sanity</div>
+            
+            
+                <div>
+                    <span class="circleVal circleStatPoints">
+                        <div class="circleText">
+                            <input class = "statInput" id = "sanityInput" placeholder="1">
+                            <label id = "sanity" onclick = "clearField('sanity')"></label>
+                        </div>
+                    </span>
+            
+            
+                    <span class="circleVal circleStatInput"></span>
+                    <span class="circleVal circleStatInput"></span>
+                    <span class="circleVal circleStatInput"></span>
+                    <span class="circleVal circleStatInput"></span>
+                    <span class="circleVal circleStatInput"></span>
+                    <span class="circleVal circleStatInput"></span>
+                    <span class="circleVal circleStatInput"></span>
+                    <span class="circleVal circleStatInput"></span>
+                    <span class="circleVal circleStatInput"></span>
+                    <span class="circleVal circleStatInput"></span>
+                    <span class="circleVal circleStatInput"></span>
+                    <span class="circleVal circleStatInput"></span>
+
+                    <span>
+                        <button class="ranButton" onclick = "calcStat('sanity')"></button>
+                    </span>
+            
+            
+                </div>
+            
+            
+            </div>
+            
+    </div>
+
+    <div class="row">
+        <div class="rowCell rowCellQTR">
+            <div class="statText">Shoplifting</div>
+            <div>
+                <span class="circleVal circleStatPoints">
+                    <div class="circleText">
+                        <input  class = "statInput" id = "shopInput" placeholder="1" >
+                        <label id = "shop" onclick = "clearField('shop')"></label>
+                    </div>
+                </span>
+    
+    
+                <span class="circleVal circleStatInput"></span>
+                <span class="circleVal circleStatInput"></span>
+                <span class="circleVal circleStatInput"></span>
+                <span class="circleVal circleStatInput"></span>
+                <span class="circleVal circleStatInput"></span>
+                <span class="circleVal circleStatInput"></span>
+                <span class="circleVal circleStatInput"></span>
+                <span class="circleVal circleStatInput"></span>
+                <span class="circleVal circleStatInput"></span>
+                <span class="circleVal circleStatInput"></span>
+                <span class="circleVal circleStatInput"></span>
+                <span class="circleVal circleStatInput"></span>
+                
+                <span>
+                    <button class="ranButton" onclick = "calcStat('shop')"></button>
+                </span>
+    
+    
+            </div>
+    
+    
+        </div>
+    
+    
+        <div class="rowCell rowCellQTR">
+            <div class="statText">Talking Trash</div>
+    
+    
+            <div>
+                <span class="circleVal circleStatPoints">
+                    <div class="circleText">
+                        <input class = "statInput" id = "trashInput" placeholder="1">
+                        <label id = "trash" onclick = "clearField('trash')"></label>
+                    </div>
+                </span>
+    
+    
+                <span class="circleVal circleStatInput"></span>
+                <span class="circleVal circleStatInput"></span>
+                <span class="circleVal circleStatInput"></span>
+                <span class="circleVal circleStatInput"></span>
+                <span class="circleVal circleStatInput"></span>
+                <span class="circleVal circleStatInput"></span>
+                <span class="circleVal circleStatInput"></span>
+                <span class="circleVal circleStatInput"></span>
+                <span class="circleVal circleStatInput"></span>
+                <span class="circleVal circleStatInput"></span>
+                <span class="circleVal circleStatInput"></span>
+                <span class="circleVal circleStatInput"></span>
+                
+                <span>
+                    <button class="ranButton" onclick = "calcStat('trash')"></button>
+                </span>
+    
+            </div>
+    
+    
+        </div>
+    
+        <div class="rowCell rowCellQTR">
+            <div class="statText">Phys Ed</div>
+    
+    
+            <div>
+                <span class="circleVal circleStatPoints">
+                    <div class="circleText">
+                        <input class = "statInput" id = "physInput" placeholder = "1" >
+                            <label id = "physED" onclick = "clearField('physED')"></label>
+                    </div>
+                </span>
+    
+    
+                <span class="circleVal circleStatInput"></span>
+                <span class="circleVal circleStatInput"></span>
+                <span class="circleVal circleStatInput"></span>
+                <span class="circleVal circleStatInput"></span>
+                <span class="circleVal circleStatInput"></span>
+                <span class="circleVal circleStatInput"></span>
+                <span class="circleVal circleStatInput"></span>
+                <span class="circleVal circleStatInput"></span>
+                <span class="circleVal circleStatInput"></span>
+                <span class="circleVal circleStatInput"></span>
+                <span class="circleVal circleStatInput"></span>
+                <span class="circleVal circleStatInput"></span>
+
+                <span>
+                    <button class="ranButton" onclick = "calcStat('physED')"></button>
+                </span>
+            </div>
+    
+    
+        </div>
+       
+    </div>
+
+    <div id = "luckRow" class = "row">
+        <label style = "font-size: xx-large"> Cultist Lucky Stat </label>
+        <span>
+            <input class = "luckyStat" id = "luckyInput" style = "margin-left: 25%; font-size: xx-large">
+        </span>
+        <span>
+            <button id = "luckyButton" class = "ranButton" onclick = calcLucky()></button>
+        </span>
+    </div>
+
+    <p>
+
+        <h1>How to use:</h1>
+
+        <p> Sorry for the text dump but you should know that</p>
+        <p>All fields are editable.</p>
+        <p>EXCEPT FOR the remaining points field which is calculated from all numerical values
+        of the six main stats (Grade Level, Pokethulu Lore, Sanity, Trash Talking, Shoplifting, and Phys Ed).
+        </p>
+
+        <p>All fields main fields can be randomized
+        </p>
+        
+        <p>EXCEPT FOR Remaining Points, Name, and Hometown</p>
+
+        <p>The randomize button is the green button with a dice logo.</p>
+
+        <p>The proper order to randomize each stat(IF YOU SO CHOOSE) is:</p>
+         <p>1: age : limits the range of a cultist's grade level</p>
+         <p>2: grade level and pokethulu lore : grade level is a maximum number this is 4 below the age. i.e 16 y/o - 4 = grade level 12</p>
+         <p>3: sanity: takes into account either the cultists's grade level or pokethulu lore value. Where one of the values and the sanity value cannot exceed 13.</p>
+         <p>4: Trash Talking, Shoplifting, Phys Ed, Cultist Lucky Stat.</p>
+
+         <p>All values will fall into the range of 1 to 12 when saved with blue button at the top that has a floppy disc logo.</p>
+
+         <p> This cultist creation tool is not perfect and may allow the creation of a broken character.</p>
+         <p> However it should help in assigning values and give a general overview for creating a unique cultist</p>
+
+    </p>
+        <script type="text/javascript" src="./CultStats.js"></script>
+        <script type = "text/javascript" src = "./cultistCreator.js"></script>
+        
+    </body>
+</html>

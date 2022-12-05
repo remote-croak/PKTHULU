@@ -1,0 +1,207 @@
+.row {
+    display: flex;
+    
+    margin-left: -8px;
+    margin-right: -8px;
+    margin-bottom: 16px;
+}
+
+#luckRow{
+    margin-left: 25%;
+}
+
+.rowCell {
+    padding-left: 36px;
+    padding-right: 36px;
+    
+    
+
+}
+
+.rowCellQTR {
+    border: fade 1px #3498db;
+    line-height: 1;
+    border-radius: 9999px;
+    margin-right: 5%;
+    flex: 15%
+
+}
+
+.rowCellFill{
+    border: fade 1px #3498db;
+    
+    line-height: 1;
+    border-radius: 9999px;
+    margin-right: 5%;
+    flex: 25%;
+}
+
+.rowCellFill2{
+    
+    line-height: 1;
+    border-radius: 9999px;
+    margin-right: 5%;
+    flex: 1;
+}
+.container {
+    
+    left:32px;
+    position: relative;
+}
+
+.containerInput:not(:placeholder-shown) + containerLabel {
+    
+    background: #FFF;
+    transform: translate(0, -50%);
+    opacity: 1;
+}
+
+.containerLabel {
+    
+    left: 8px;
+    position: absolute;
+    top: 0;
+
+    opacity: 0;
+    transition: all 200ms;
+}
+
+
+.circleVal {
+    border-radius: 50%;
+    line-height: 0;
+    position: relative;
+    border: 1px solid #000;
+    margin-bottom: 5px;
+}
+
+.circleText {
+    position: absolute;
+    bottom: 50%;
+    width: 100%;
+    text-align: center;
+    font-size: 60px;
+}
+.circleRemPoints {
+    width: 150px;
+    height: 150px;
+    margin-left: -25px;
+    
+    background: transparent;
+    
+}
+
+.circleStatPoints {
+    
+    width: 75px;
+    height: 75px;
+    background: #FFF;
+    display: inline-block;
+    
+}
+
+
+
+.statInput{
+    border: 0px;
+    width: 45px;
+    position: flex;
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: -32%;
+    
+   
+}
+
+.circleStatInput {
+    display: inline-block;
+    margin-bottom: 5%;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(252,120,20);
+}
+
+.statText {
+    display: flex;
+    position: absolute;
+    margin-left: 5%;
+    font-size:xx-large;
+}
+
+#lore{
+    transform: translate(-15px, 0px);
+}
+
+.ranButton {
+    border: 0px;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+    background-image: url(../assets/DiceIcon.png);
+    background-size: 60px;
+    transform: translate(15px,-42px);
+    
+}
+
+.ranButton:hover{
+    width: 65px;
+    height:65px;
+    background-size: 65px;
+}
+
+
+#luckyButton{
+    margin-left: 125%;
+    transform: translate(5px, -20px);
+    width: 85px;
+    height: 85px;
+    background-size: 85px;
+}
+
+#luckyButton:Hover{
+    width: 88px;
+    height: 88px;
+    background-size: 88px;
+}
+
+#ageButton{
+    width: 50px;
+    height: 50px;
+    background-size: 50px;
+    margin-left: 185px;
+    margin-top: 8px;
+}
+
+#ageButton:hover{
+    width: 55px;
+    height: 55px;
+    background-size: 55px;
+  
+}
+
+.ranAge{
+    border: 1px solid gray;
+  
+    position: static;
+    
+    padding-right: 145px;
+    padding-top: 3px;
+    padding-bottom: 2px;
+    
+    margin-left: -147px;
+    font-size: 14px;
+}
+
+.saveButton{
+    border: 0px;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    background-image: url(../assets/saveicon.png);
+    background-size: 150px;
+    position:flex;
+    margin-left: -25px;
+    margin-bottom: 5px;
+    
+}
